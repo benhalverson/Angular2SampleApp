@@ -23,11 +23,11 @@ import { Component } from 'angular2/core';
   `
 })
 class reddit {
-  constructor() {
-    addArticle(title:string, link:string) {
-      console.log(`Adding article title: ${title.value} and link: ${link.value}`)
-    }
+  constructor() {}
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): void {
+    console.log(`Adding article title: ${title.value} and link: ${link.value}`)
   }
+
 }
 
 bootstrap(reddit);

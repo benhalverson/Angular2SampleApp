@@ -23,11 +23,10 @@ System.register(['angular2/platform/browser', 'angular2/core'], function(exports
         execute: function() {
             reddit = (function () {
                 function reddit() {
-                    addArticle(title, string, link, string);
-                    {
-                        console.log("Adding article title: " + title.value + " and link: " + link.value);
-                    }
                 }
+                reddit.prototype.addArticle = function (title, link) {
+                    console.log("Adding article title: " + title.value + " and link: " + link.value);
+                };
                 reddit = __decorate([
                     core_1.Component({
                         selector: 'reddit',
