@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng2 reddit</title>
+</head>
+<body>
+  <script src="node_modules/es6-shim/es6-shim.js"></script>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- config system.js -->
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('app.js')
+          .then(null, console.error.bind(console));
+  </script>
+  <!-- menu bar -->
+  <div class="ui menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        <!-- <img class="logo" src="#.jpg"> -->
+        ng-book 2
+      </a>
+      <div class="header item borderless">
+        <h1 class="ui header">
+          Anagular 2 reddit
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="ui main text container">
+    <reddit></reddit>
+  </div>
+</body>
+</html>
